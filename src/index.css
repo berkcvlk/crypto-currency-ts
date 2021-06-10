@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #4e8a8d;
+  --faded-color: #d4dfdf;
+}
+
 *,
 *:after,
 *:before {
@@ -6,4 +13,5 @@
 
 body {
   margin: 0;
+  font-family: "Dosis", sans-serif;
 }
