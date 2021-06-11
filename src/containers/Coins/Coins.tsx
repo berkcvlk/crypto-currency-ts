@@ -11,12 +11,9 @@ const CurrencyContainer = () => {
   useEffect(() => {
     (async () => {
       const list = await getCoins();
-      console.log(`list`, list);
       setCoins(list);
     })();
   }, []);
-
-  console.log(`coins`, coins);
 
   return <CoinList list={coins} />;
 };
