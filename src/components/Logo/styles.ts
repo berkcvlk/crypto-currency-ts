@@ -12,7 +12,7 @@ export const Div = styled.div`
   grid-column: 1 / 3;
   grid-row: 1 / 3;
 
-  background-color: var(--faded-color);
+  background-color: var(--background-color);
   border-radius: 25px;
 `;
 

@@ -7,7 +7,7 @@ export const Div = styled.div`
   justify-content: center;
 
   border-radius: 25px;
-  background-color: #f1f1f1;
+  background-color: var(--background-color);
 
   padding: 25px 20px;
 `;
@@ -17,7 +17,7 @@ export const Image = styled.img`
   height: 42px;
 
   opacity: 0.65;
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
   object-fit: contain;
 
   margin-bottom: 12px;
