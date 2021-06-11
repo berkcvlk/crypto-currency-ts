@@ -11,7 +11,7 @@ export const SPARKLINE = false;
 // This list can be get from
 // ...api/v3/simple/supported_vs_currencies
 // But, for now, just support these.
-export enum currencies {
+export enum SupportedCurrencies {
   "usd" = "$",
   "eur" = "€",
   "gbp" = "£",

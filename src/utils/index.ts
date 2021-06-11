@@ -1,4 +1,4 @@
-import { CURRENCY, currencies } from "../constants";
+import { CURRENCY, SupportedCurrencies } from "../constants";
 
 export const urlBuilder = (base: string, path: string, params?: {}) => {
   if (!path.includes("?") && params) {
@@ -16,7 +16,7 @@ export const urlBuilder = (base: string, path: string, params?: {}) => {
 
 // According to CURRENCY constant
 // change CoinItem currency symbol
-// For now, just supported "currencies" enum
+// For now, just supported "SupportedCurrencies" enum
 export const currencyPicker = () => {
-  return currencies[CURRENCY];
+  return SupportedCurrencies[CURRENCY];
 };
