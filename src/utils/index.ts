@@ -14,6 +14,9 @@ export const urlBuilder = (base: string, path: string, params?: {}) => {
   return base + path + query;
 };
 
+// According to CURRENCY constant
+// change CoinItem currency symbol
+// For now, just supported "currencies" enum
 export const currencyPicker = () => {
   return currencies[CURRENCY];
 };
