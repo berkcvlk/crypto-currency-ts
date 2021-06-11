@@ -13,7 +13,7 @@ export const Div = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 42px;
+  width: auto;
   height: 42px;
 
   opacity: 0.65;
