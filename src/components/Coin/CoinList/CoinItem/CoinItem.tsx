@@ -12,7 +12,7 @@ const CoinItem: FC<Props> = ({ item: { image, current_price } }) => {
   return (
     <Div>
       <Image src={image} />
-      <Price>{`${currencyPicker() + current_price}`}</Price>
+      <Price>{currencyPicker() + current_price}</Price>
     </Div>
   );
 };
