@@ -5,6 +5,9 @@ import { urlBuilder } from "../utils";
 
 export const getCoins = async () => {
   const params = {
+    // Fields need to match coingecko api
+    // for the documents, check the swagger.json
+    // https://www.coingecko.com/api/documentations/v3#/
     vs_currency: cons.CURRENCY,
     order: cons.MARKET_CAP_ORDER,
     per_page: cons.COIN_PER_PAGE,
