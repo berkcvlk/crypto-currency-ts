@@ -16,8 +16,8 @@ export const Search = styled.div`
   height: 55px;
 
   margin-bottom: 40px;
-  background-color: #f1f1f1;
-  border-radius: 25px;
+  background-color: var(--background-color);
+  border-radius: 15px;
 `;
 
 export const Main = styled.main`

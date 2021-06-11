@@ -3,6 +3,7 @@
 :root {
   --primary-color: #4e8a8d;
   --faded-color: #d4dfdf;
+  --background-color: #f4f4f4;
 }
 
 *,
@@ -13,14 +14,15 @@
 
 body {
   margin: 0;
+  padding: 40px 0;
   font-family: "Dosis", sans-serif;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  height: 100vh;
   background-color: #ededed;
+  min-height: 100vh;
 }
 
 body::before {
