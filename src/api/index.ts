@@ -26,7 +26,7 @@ export const getCoins = async () => {
   const response = await axios.get(
     urlBuilder(BASE_URL, "/coins/markets", params)
   );
-  const data = response.data;
+  const data = await response.data;
 
   return data;
 };
