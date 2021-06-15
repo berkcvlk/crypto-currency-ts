@@ -6,16 +6,23 @@ import { ICoin } from "../../types";
 
 const CurrencyContainer = () => {
   const [coins, setCoins] = useState<ICoin[]>([]);
+  const [loading, setLoading] = useState(true);
 
   // Get coin list from coingecko api
   useEffect(() => {
     (async () => {
       const list = await getCoins();
       setCoins(list);
+      setLoading(false);
     })();
   }, []);
 
-  return <CoinList list={coins} />;
+  let loadingRenderer;
+  if (loading) {
+    loadingRenderer = <div>...</div>;
+  }
+
+  return loadingRenderer || <CoinList list={coins} />;
 };
 
 export default CurrencyContainer;
