@@ -9,7 +9,7 @@ export const Div = styled.div`
   border-radius: 25px;
   background-color: var(--background-color);
 
-  padding: 25px 20px;
+  padding: 20px;
 `;
 
 export const Image = styled.img`
