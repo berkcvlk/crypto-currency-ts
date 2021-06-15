@@ -5,8 +5,6 @@ export const urlBuilder = (base: string, path: string, params?: {}) => {
     path = path + "?";
   }
 
-  // Add the query params if there is
-  // params object
   const query = params
     ? Object.entries(params).reduce((q, v) => q + `&${v[0] + "=" + v[1]}`, "")
     : "";
