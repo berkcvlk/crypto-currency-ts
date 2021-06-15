@@ -1,7 +1,7 @@
 import { Logo } from "../../components/Logo";
-import { Coins } from "../../containers";
+import { Search, Coins } from "../../containers";
 
-import { Grid, Main, Search } from "./styles";
+import { Grid, Main } from "./styles";
 
 const Home = () => {
   return (
