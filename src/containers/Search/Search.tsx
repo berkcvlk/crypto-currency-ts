@@ -1,26 +1,43 @@
-import styled from "styled-components";
+import { useEffect, useState } from "react";
+
 import { SearchBar } from "../../components/Search";
+import { CoinList } from "../../components/Coin";
+
+import { Backdrop, Results } from "./styles";
+
+import { getCoins } from "../../api";
+import { ICoin } from "../../types";
 
 const Search = () => {
+  const [isFocused, setIsFocused] = useState(false);
+  const [searchText, setSearchText] = useState("");
+  const [coins, setCoins] = useState<ICoin[]>([]);
+
+  const onFocusHandler = () => {
+    setIsFocused(true);
+  };
+
+  useEffect(() => {
+    (async () => {
+      const list = await getCoins();
+      setCoins(list);
+    })();
+  }, []);
+
   return (
     <>
-      <Backdrop />
-      <SearchBar placeholder="Search"></SearchBar>
+      <SearchBar onFocus={onFocusHandler} placeholder="Search"></SearchBar>
+
+      {!isFocused || (
+        <>
+          <Backdrop />
+          <Results>
+            <CoinList list={coins} />
+          </Results>
+        </>
+      )}
     </>
   );
 };
-
-const Backdrop = styled.div`
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100vh;
-
-  background-color: rgba(81, 81, 81, 0.25);
-  backdrop-filter: blur(3px);
-
-  z-index: 1040;
-`;
 
 export default Search;
