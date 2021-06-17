@@ -18,9 +18,8 @@ export const getCoins = async () => {
   // urlBuilder returns related url for
   // the coin list according to the constants in the
   // "constants" file. This can be changed!
-  const response = await axios.get(
-    urlBuilder(cons.BASE_URL, "/coins/markets", params)
-  );
+  const path = "/coins/markets";
+  const response = await axios.get(urlBuilder(cons.BASE_URL, path, params));
   const data = await response.data;
 
   return data;
