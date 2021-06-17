@@ -9,12 +9,12 @@ import { getCoins } from "../../api";
 import { ICoin } from "../../types";
 
 const Search = () => {
-  const [isFocused, setIsFocused] = useState(false);
+  const [isSearchFieldShown, setIsSearchFieldShown] = useState(false);
   const [searchText, setSearchText] = useState("");
   const [coins, setCoins] = useState<ICoin[]>([]);
 
-  const onFocusHandler = () => {
-    setIsFocused(true);
+  const showSearchFieldHandler = () => {
+    setIsSearchFieldShown(true);
   };
 
   useEffect(() => {
@@ -24,18 +24,22 @@ const Search = () => {
     })();
   }, []);
 
+  const searchFieldRenderer = isSearchFieldShown && (
+    <>
+      <Backdrop />
+      <Results>
+        <CoinList list={coins} />
+      </Results>
+    </>
+  );
+
   return (
     <>
-      <SearchBar onFocus={onFocusHandler} placeholder="Search"></SearchBar>
-
-      {!isFocused || (
-        <>
-          <Backdrop />
-          <Results>
-            <CoinList list={coins} />
-          </Results>
-        </>
-      )}
+      <SearchBar
+        onShowSearchField={showSearchFieldHandler}
+        placeholder="Search"
+      ></SearchBar>
+      {searchFieldRenderer}
     </>
   );
 };
