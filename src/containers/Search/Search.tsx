@@ -45,7 +45,9 @@ const Search = () => {
     }
 
     setFilteredCoinsList(
-      coins.filter((e) => e.name.toLowerCase().includes(searchText))
+      coins.filter((e) =>
+        e.name.toLowerCase().includes(searchText.toLowerCase())
+      )
     );
   }, [coins, searchText]);
 
