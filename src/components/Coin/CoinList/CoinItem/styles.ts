@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
-  height: 130px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,6 +10,7 @@ export const Div = styled.div`
   background-color: var(--background-color);
 
   padding: 20px;
+  min-height: 145px;
 `;
 
 export const Image = styled.img`
@@ -24,6 +23,15 @@ export const Image = styled.img`
 
   margin-bottom: 12px;
 `;
+
+export const Name = styled.span`
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-bottom: 5px;
+
+  color: var(--primary-color);
+`
 
 export const Price = styled.span`
   font-size: 16px;
