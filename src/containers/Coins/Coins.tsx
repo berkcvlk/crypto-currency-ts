@@ -4,7 +4,7 @@ import { CoinList } from "../../components/Coin";
 import { getCoins } from "../../api";
 import { ICoin } from "../../types";
 
-const CurrencyContainer = () => {
+const Coins = () => {
   const [coins, setCoins] = useState<ICoin[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -17,12 +17,11 @@ const CurrencyContainer = () => {
     })();
   }, []);
 
-  let loadingRenderer;
   if (loading) {
-    loadingRenderer = <div>...</div>;
+    return <div>...</div>;
   }
 
-  return loadingRenderer || <CoinList list={coins} />;
+  return <CoinList list={coins} />;
 };
 
-export default CurrencyContainer;
+export default Coins;
