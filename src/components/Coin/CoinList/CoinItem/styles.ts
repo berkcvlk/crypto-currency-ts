@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
+  height: 130px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
