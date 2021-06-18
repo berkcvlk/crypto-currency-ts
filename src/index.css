@@ -23,6 +23,9 @@ body {
 
   background-color: #ededed;
   min-height: 100vh;
+
+  /** to prevent tilt on scroll visible */
+  overflow-y: scroll;
 }
 
 body::before {
@@ -32,4 +35,23 @@ body::before {
   height: 5px;
   background: var(--faded-color);
   content: "";
+}
+
+/** Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5e5e5e;
+  border-radius: 10px;
+  border: 1px var(--faded-color) solid;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
 }
