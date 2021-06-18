@@ -3,14 +3,14 @@ import axios from "axios";
 import * as cons from "../constants";
 import { urlBuilder } from "../utils";
 
-export const getCoins = async () => {
+export const getCoins = async (coinPerPage: number = cons.COIN_PER_PAGE) => {
   const params = {
     // Fields need to match coingecko api
     // for the documents, check the swagger.json
     // https://www.coingecko.com/api/documentations/v3#/
     vs_currency: cons.CURRENCY,
     order: cons.MARKET_CAP_ORDER,
-    per_page: cons.COIN_PER_PAGE,
+    per_page: coinPerPage,
     page: cons.PAGE,
     sparkline: cons.SPARKLINE,
   };
