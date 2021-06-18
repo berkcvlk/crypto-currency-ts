@@ -15,6 +15,7 @@ export const Backdrop = styled.div`
 
 export const Results = styled.div`
   position: absolute;
+
   top: 170px;
   margin: auto;
 
@@ -24,7 +25,30 @@ export const Results = styled.div`
   grid-gap: 30px;
 
   width: 770px;
-  height: calc(100vh - 250px);
+  height: calc(100vh - 225px);
+  overflow-y: visible;
+
+  z-index: 1050;
+`;
+
+export const CloseButton = styled.button`
+  position: absolute;
+  top: -85px;
+  right: -40px;
+
+  width: 25px;
+  height: 25px;
+
+  font-family: "Dosis", sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+
+  color: var(--primary-color);
+  cursor: pointer;
+
+  outline: none;
+  border: none;
+  background-color: transparent;
 
   z-index: 1050;
 `;
