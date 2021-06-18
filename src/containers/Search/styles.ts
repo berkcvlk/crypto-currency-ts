@@ -16,15 +16,15 @@ export const Backdrop = styled.div`
 export const Results = styled.div`
   position: absolute;
 
-  top: 170px;
+  top: 150px;
   margin: auto;
 
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-gap: 30px;
+  grid-gap: 20px;
 
-  width: 770px;
+  width: 885px;
   height: calc(100vh - 225px);
   overflow-y: visible;
 
@@ -33,7 +33,7 @@ export const Results = styled.div`
 
 export const CloseButton = styled.button`
   position: absolute;
-  top: -85px;
+  top: -80px;
   right: -40px;
 
   width: 25px;

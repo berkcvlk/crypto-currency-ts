@@ -6,8 +6,7 @@ export const Div = styled.div`
   justify-content: center;
   align-items: center;
 
-  width: 290px;
-  height: 290px;
+  height: 310px;
 
   grid-column: 1 / 3;
   grid-row: 1 / 3;
