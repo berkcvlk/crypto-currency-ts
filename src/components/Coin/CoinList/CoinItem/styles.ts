@@ -10,7 +10,8 @@ export const Div = styled.div`
   background-color: var(--background-color);
 
   padding: 20px;
-  min-height: 145px;
+
+  aspect-ratio: 1;
 `;
 
 export const Image = styled.img`
@@ -31,7 +32,7 @@ export const Name = styled.span`
   margin-bottom: 5px;
 
   color: var(--primary-color);
-`
+`;
 
 export const Price = styled.span`
   font-size: 16px;

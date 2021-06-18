@@ -16,7 +16,7 @@ export const Backdrop = styled.div`
 export const Results = styled.div`
   position: absolute;
 
-  top: 150px;
+  top: 135px;
   margin: auto;
 
   display: grid;
@@ -25,7 +25,6 @@ export const Results = styled.div`
   grid-gap: 20px;
 
   width: 885px;
-  height: calc(100vh - 225px);
   overflow-y: visible;
 
   z-index: 1050;
